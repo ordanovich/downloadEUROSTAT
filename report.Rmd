@@ -1,0 +1,101 @@
+---
+title: "Summary report"
+output: html_document
+params:
+  n: NA
+  m: NA
+  y1: NA
+  y2: NA
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+params$n
+params$m
+```
+
+# Aggregation made for the period `r params$y1` - `r params$y2`
+
+## Whiskers (free)
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library(dplyr)
+library(magrittr)
+library(eurostat)
+library(sf)
+library(tidyr)
+library(DT)
+library(sparkline)
+library(shiny)
+library(shinycssloaders)
+library(shinydashboard)
+library(shinydashboardPlus)
+library(htmlwidgets)
+library(openxlsx)
+library(rmarkdown)
+
+js <- "function(data, type, full){ return '<span class=spark>' + data + '</span>' }"
+colDefs2 <- list(list(targets = c(1:6), render = JS(js)))
+
+
+r <- range(params$n$Value)
+
+x <- "function (oSettings, json) { $('.spark:not(:has(canvas))').sparkline('html', { "
+
+box_string <- "type: 'box', lineColor: 'black', whiskerColor: 'black', outlierFillColor: 'black', outlierLineColor: 'black', medianColor: 'black', boxFillColor: 'orange', boxLineColor: 'black'"
+cb_box1 <- JS(paste0(x, box_string, " }); }"), collapse = "")
+
+d3 <- datatable(as.data.frame(params$m),
+                rownames = FALSE, 
+                options = list(columnDefs = colDefs2,
+                               fnDrawCallback = cb_box1))
+
+d3$dependencies <- append(d3$dependencies, htmlwidgets:::getDependency("sparkline"))
+
+d3
+```
+
+
+## Whiskers (fixed to a single range)
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library(dplyr)
+library(magrittr)
+library(eurostat)
+library(sf)
+library(tidyr)
+library(DT)
+library(sparkline)
+library(shiny)
+library(shinycssloaders)
+library(shinydashboard)
+library(shinydashboardPlus)
+library(htmlwidgets)
+library(openxlsx)
+library(rmarkdown)
+
+r <- range(params$n$Value)
+
+
+js <- "function(data, type, full){ return '<span class=spark>' + data + '</span>' }"
+
+colDefs2 <- list(list(targets = c(1:6), render = JS(js)))
+
+box_string <- "type: 'box', lineColor: 'black', whiskerColor: 'black', outlierFillColor: 'black', outlierLineColor: 'black', medianColor: 'black', boxFillColor: 'orange', boxLineColor: 'black'"
+
+cb_box2 <- JS(paste0(x, box_string, ", chartRangeMin: ", r[1], ", chartRangeMax: ",
+                     r[2], " }); }"), collapse = "")
+
+d4 <- DT::datatable(as.data.frame(params$m),
+                    
+                    rownames = FALSE, 
+                    
+                    options = list(columnDefs = colDefs2, 
+                                   fnDrawCallback = cb_box2
+                    ))
+
+d4$dependencies <- append(d4$dependencies, htmlwidgets:::getDependency("sparkline"))
+
+d4
+
+```
+
