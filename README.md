@@ -4,11 +4,10 @@
 
 ## Interactive application for programmatic data retrieval from [EUROSTAT](https://ec.europa.eu/eurostat/data/database) database
 
-This appication is based on the [**eurostat** package](http://ropengov.github.io/eurostat/index.html): 
+This appication is based on the [**eurostat** package](http://ropengov.github.io/eurostat/index.html). To learn more about the functionality of the package please refer to the [tutorial](http://ropengov.github.io/eurostat/articles/eurostat_tutorial.html).
+
 *Leo Lahti, Przemyslaw Biecek, Markus Kainu and Janne Huovari. **Retrieval and analysis of Eurostat open data with the eurostat package.** R Journal 9(1):385-392, 2017). 
 R package version 3.3.5. URL: [http://ropengov.github.io/eurostat](http://ropengov.github.io/eurostat)*
-
-To start working with the package please refer to the [tutorial](http://ropengov.github.io/eurostat/articles/eurostat_tutorial.html).
 
 ### Nomenclature
 
