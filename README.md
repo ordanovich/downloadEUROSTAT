@@ -2,7 +2,7 @@
   <img src="https://github.com/ordanovich/images/blob/master/portadaWlogos.png?raw=true">
 </p>
 
-## Interactive application for programmatic data retrieval from [EUROSTAT](https://ec.europa.eu/eurostat/data/database)
+## Interactive application for programmatic data retrieval from [EuroStat](https://ec.europa.eu/eurostat/data/database)
 
 This appication is based on the [**eurostat** package](http://ropengov.github.io/eurostat/index.html). To learn more about the functionality of the package please refer to the [tutorial](http://ropengov.github.io/eurostat/articles/eurostat_tutorial.html).
 
