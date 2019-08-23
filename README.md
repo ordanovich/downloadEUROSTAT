@@ -1,4 +1,4 @@
-<p align="center"><a href="http://193.146.75.235/sample-apps/final_apps/layout/"><img src="https://github.com/ordanovich/images/blob/master/logoColor2Wbord.png?raw=true"></a></p>
+<p align="center"><a href="http://193.146.75.235/sample-apps/final_apps/layout/"><img src="https://github.com/ordanovich/images/blob/master/logoColor2Wbord_medium.png?raw=true"></a></p>
 
 ## Interactive application for programmatic data retrieval from [Eurostat](https://ec.europa.eu/eurostat/data/database)
 
@@ -14,5 +14,3 @@ R package version 3.3.5. URL: [http://ropengov.github.io/eurostat](http://ropeng
 - :bar_chart: [report.Rmd](https://github.com/ordanovich/downloadEUROSTAT/blob/master/report.Rmd): template markdown file to generate and download an HTML report through the application interface
 
 The application itself (use `shiny::runApp()` from the cloned repository or open the <a href="http://193.146.75.235/sample-apps/final_apps/eurostat_download/"  rel="noopener noreferrer" target="_blank">online version</a> to preview the app) pursues the goal to allow users to consult the contents of the data base, retrieve and visualize the desired datasets in a quick and easy-to-manipulate manner. 
-
-<p align="center"><a href="http://longpop-itn.eu/"><img src="https://github.com/ordanovich/images/blob/master/logos3inline.png?raw=true"></a></p>
