@@ -1,4 +1,4 @@
-<p align="center"><a href="http://193.146.75.235/sample-apps/final_apps/layout/"><img src="https://github.com/ordanovich/images/blob/master/portada_small.png?raw=true"></a></p>
+<p align="center"><a href="http://193.146.75.235/sample-apps/final_apps/layout/"><img src="https://github.com/ordanovich/images/blob/master/logoColor2Wbord.png?raw=true"></a></p>
 
 ## Interactive application for programmatic data retrieval from [Eurostat](https://ec.europa.eu/eurostat/data/database)
 
